@@ -10,4 +10,4 @@
     yum: pkg=httpd state=latest
   - name: start httpd
     service: name=httpd state=running
-}
+
