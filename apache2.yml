@@ -4,7 +4,9 @@
     http_port: 80
     max_clients: 200
   remote_user: root
-
+  become: true
+  become_user: root
+  become_method: su
   tasks:
   - name: install httpd
     yum: pkg=httpd state=latest
