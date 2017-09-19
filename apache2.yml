@@ -5,11 +5,11 @@
     max_clients: 200
   remote_user: root
   become: true
+  become_method: su
   become_user: root
-  become_method: sudo
   tasks:
   - name: install httpd
-    yum: pkg=httpd state=started
+    yum: pkg=httpd state=latest
   - name: start httpd
     service: name=httpd state=running
 
