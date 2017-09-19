@@ -6,10 +6,9 @@
   remote_user: root
   become: true
   become_user: root
-  become_method: su
   tasks:
   - name: install httpd
-    yum: pkg=httpd state=latest
+    yum: pkg=httpd state=started
   - name: start httpd
     service: name=httpd state=running
 
